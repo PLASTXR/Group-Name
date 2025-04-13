@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <script type="module" src="../firebaseconfig.js" defer></script>
+    <script type="module" src="../register.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,10 +75,6 @@
         <h1>Sign Up</h1>
         <form action="/register" method="POST">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" autocomplete="current-username" required>
-            </div>
-            <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
@@ -91,7 +87,7 @@
             </div>
         </form>
         <div class="form-footer">
-            <p>Already have an account? <a href="/login">Log in</a></p>
+            <p>Already have an account? <a href="./login.html">Log in</a></p>
         </div>
     </div>
 </body>
