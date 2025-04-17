@@ -43,7 +43,7 @@
     }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-    .flip-card:hover .flip-card-inner {
+    .flip-card:on-click .flip-card-inner {
         transform: rotateY(180deg);
     }
 
@@ -67,6 +67,13 @@
         background-color:rgba(247, 194, 87, 1);
         color: white;
         transform: rotateY(180deg);
+    }
+
+    .flip-card-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
     }
 </style>
 
@@ -207,5 +214,6 @@
 	    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> <!--Bootstrap JS-->
+    <script src="MatchTheCards.js"></script>
 </body>
 </html>
