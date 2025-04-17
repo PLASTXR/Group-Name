@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update the score display
     function updateScoreDisplay() {
-        const scoreElement = document.querySelector('.card-body');
+        const scoreElement = document.querySelector('#correctGuesses');
         if (scoreElement) {
             scoreElement.textContent = `Correct guesses: ${correctGuesses}/${totalPairs}`;
         }
