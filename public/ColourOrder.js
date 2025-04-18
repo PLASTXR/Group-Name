@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         yellow: document.getElementById('yellow')
     };
     
-    const roundDisplay = document.querySelector('.card-body');
+    const roundDisplay = document.querySelector('#rounds');
     const quitButton = document.querySelector('.btn');
     
     // Game variables
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight a card (visual feedback)
     function highlightCard(color) {
         const card = colorCards[color];
-        card.style.boxShadow = '0 0 20px white';
+        card.style.boxShadow = '0 0 20px #287782';
         card.style.transform = 'scale(1.05)';
     }
     
