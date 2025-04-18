@@ -10,40 +10,65 @@
 
 <style>
     nav{
+        color: #212529;
         background: #155761;
         background: linear-gradient(0deg, rgba(21, 87, 97, 1) 0%, rgba(59, 132, 141, 1) 100%);
     }
     .btn{
-        background-color: #8BBFB0;
+        background: linear-gradient(#8BBFB0,rgba(59, 132, 141, 1));
+        border-radius: 17px;
     }
     .btn:hover{
-        background-color: rgba(59, 132, 141, 1);
+        transform:scale(1.05);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     }
     body{
-        background-color:#a8dee6;
+        background: linear-gradient(#e6f5f7,#9dccd1);
+        font-size: large;
+        margin-top: 30vh;
+        margin-bottom: 12vh;
     }
     .card-title{
         padding: 25%;
     }
     #red{
         background: #a83c32;
+        cursor: pointer;
     }
     #green{
         background: #32a836;
+        cursor: pointer;
     }
     #blue{
         background: #3277a8;
+        cursor: pointer;
     }
     #yellow{
         background: #a8a632;
+        cursor: pointer;
+    }
+    #main{
+        padding-top: 1vh;
+        padding-bottom: 10vh;
+        margin: 10px;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        border-radius: 50px;
+    }
+    #card-order{
+        margin-bottom: 6vh; 
+        background-color: white; 
+        border-radius: 50px; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+        margin: 3%;
+        padding:1%
     }
     .card {
     transition: all 0.3s ease;
-    cursor: pointer;
     }
 
     .card-title {
-        color: white;
+        color: Black;
         font-weight: bold;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         user-select: none;
@@ -59,12 +84,15 @@
         align-items: center;
         font-size: 3rem;
     }
+    .rounds{
+        max-width: 50px;
+    }
     </style>
 
-<nav class="navbar">
+<nav class="navbar fixed-top">
     <div class="container"><h1>Remember the Colour Order</h1>
-      <a class="navbar-brand" href="login.html"> Log In
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <a class="navbar-brand" href="login.html" style="color: #212529;"> Log In
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#212529" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
           </svg>
@@ -73,53 +101,58 @@
 </nav>
 <body>
     <div class="container">
-        <div class="row g-1">
-            <div class="col p-5">
-                <div class="card text-center" id="red" style="width: 18rem;">
-                    <div class="card-body">
-                        <h1 class="card-title">?</h1>
+        <div class="card" id="main" style="box-shadow: 0 4px 6px rgba(0,0,0,0.3); background-color: #fafafa;">
+            <div class="card-title" id="card-order">
+                Color Order!
+            </div>
+            <div class="card-body">
+                <div class="d-flex flex-row justify-content-center ">
+                    <div class="d-flex flex-col col-5">
+                        <div class="card text-center" id="red" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">?</h1>
+                            </div>
+                        </div>
+                        <div class="card text-center" id="blue" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">?</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="d-flex flex-col col-5">
+                        <div class="card text-center" id="green" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">?</h1>
+                            </div>
+                        </div>
+                        <div class="card text-center" id="yellow" style="width: 18rem;">
+                            <div class="card-body">
+                                <h1 class="card-title">?</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col p-5">
-                <div class="card text-center" id="blue" style="width: 18rem;">
-                    <div class="card-body">
-                        <h1 class="card-title">?</h1>
-                    </div>
-                </div>
-            </div>
-	    </div>
-        <div class="row g-1">
-            <div class="col p-5">
-                <div class="card text-center" id="green" style="width: 18rem;">
-                    <div class="card-body">
-                        <h1 class="card-title">?</h1>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col p-5">
-                <div class="card text-center" id="yellow" style="width: 18rem;">
-                    <div class="card-body">
-                        <h1 class="card-title">?</h1>
-                    </div>
-                </div>
-            </div>
-	    </div>
-        <div class="row g-1">
-            <div class="col p-5">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body" id="rounds">
+
+            
+            
+        </div>
+        <div class="d-flex flex-row justify-content-center row-15" style="padding-top: 20vh;" id="break">
+            <div class="d-flex flex-col" style="padding-right: 30vw;">
+                <div class="card" style="max-width: 135px;">
+                    <div class="card-body" style="background: linear-gradient(to right,rgba(59, 132, 141, 1), #8BBFB0); border-radius: 6px;" id="rounds">
                       Rounds:
                     </div>
                 </div>
             </div>
-            <div class="col p-5">
+            <div class="d-flex flex-col col-5" style="padding-left: 30vw;">
                 <div style="width: 18rem;">
                     <a href="home.html" class="btn">Quit</a>
                 </div>
             </div>
-	    </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> <!--Bootstrap JS-->
     <script src="ColourOrder.js"></script>

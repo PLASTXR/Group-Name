@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rollButton.style.cssText = `
             padding: 15px 30px;
             font-size: 18px;
-            background: linear-gradient(to right, #4CAF50, #2E7D32);
+            background: linear-gradient(to right, #A432A8, #641F66);
             color: white;
             border: none;
             border-radius: 50px;
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 style="margin-top: 0;">${message}</h2>
             <button id="closeModal" style="
                 padding: 10px 20px;
-                background: #4CAF50;
+                background: linear-gradient(to right, #A432A8, #641F66);
                 color: white;
                 border: none;
                 border-radius: 5px;

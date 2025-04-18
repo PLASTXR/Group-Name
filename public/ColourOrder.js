@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight a card (visual feedback)
     function highlightCard(color) {
         const card = colorCards[color];
-        card.style.boxShadow = '0 0 20px #287782';
+        card.style.boxShadow = '0 0 20px #243f42';
         card.style.transform = 'scale(1.05)';
     }
     

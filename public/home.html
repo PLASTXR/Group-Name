@@ -16,10 +16,12 @@
         border-bottom-right-radius: 1vw ;
     }
     .btn{
-        background-color: #69AD5F;
+        background: linear-gradient(#69AD5F, #418241);
+        border-radius: 17px;
     }
     .btn:hover{
-        background-color: #8fc3a4;
+        transform:scale(1.05);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     }
     body{
         background-color:#c1e3c3;
@@ -29,8 +31,8 @@
 
 <nav class="navbar">
     <div class="container"><h1>Memorisation Games</h1>
-      <a class="navbar-brand" href="login.html"> Log In
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <a class="navbar-brand" href="login.html" style="color: #212529;"> Log In
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#212529" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
           </svg>
@@ -39,8 +41,8 @@
 </nav>
 <body>
     <div class="container">
-        <div class="row g-5">
-            <div class="col p-5">
+        <div class="d-inline-flex row g-5">
+            <div class="d-inline-flex col p-5">
                 <div class="card text-center shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
                     <img src="#" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -61,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col p-5">
+            <div class="d-inline-flex col p-5">
                 <div class="card text-center shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
                     <img src="#" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -82,7 +84,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col p-5">
+            <div class="d-inline-flex col p-5">
                 <div class="card text-center shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
                     <img src="#" class="card-img-top" alt="...">
                     <div class="card-body">
