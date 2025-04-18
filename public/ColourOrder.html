@@ -37,7 +37,29 @@
     #yellow{
         background: #a8a632;
     }
-</style>
+    .card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    }
+
+    .card-title {
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        user-select: none;
+    }
+
+    /* Remove the padding from card-title since we're not using question marks */
+    .card-title {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+    }
+    </style>
 
 <nav class="navbar">
     <div class="container"><h1>Remember the Colour Order</h1>
@@ -100,5 +122,6 @@
 	    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script> <!--Bootstrap JS-->
+    <script src="ColourOrder.js"></script>
 </body>
 </html>
