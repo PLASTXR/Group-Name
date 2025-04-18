@@ -1,13 +1,16 @@
 {
-    "hosting": {
-      "site": "group-name-info-project-e193a",
-  
-      "public": "public",
-      
-      "ignore": [
+  "hosting": {
+    "public": "public",
+    "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/home.html"
+      }
     ]
-    }
   }
+}
