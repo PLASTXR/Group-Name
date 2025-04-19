@@ -13,6 +13,8 @@
         color: #212529;
         background: #155761;
         background: linear-gradient(0deg, rgba(21, 87, 97, 1) 0%, rgba(59, 132, 141, 1) 100%);
+        border-bottom-left-radius: 1vw ;
+        border-bottom-right-radius: 1vw ;
     }
     .btn{
         background: linear-gradient(#8BBFB0,rgba(59, 132, 141, 1));
@@ -23,10 +25,11 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     }
     body{
-        background: linear-gradient(#e6f5f7,#9dccd1);
+        background: #91c6cc;
+        background: linear-gradient(0deg, rgba(145, 198, 204, 1) 9%, rgba(230, 245, 247, 1) 100%);
         font-size: large;
         margin-top: 15vh;
-        margin-bottom: 5vh;
+        min-height: 100vh;
     }
     .card-title{
         padding: 25%;
@@ -61,12 +64,12 @@
         border-radius: 50px; 
         box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
         margin: 3%;
-        padding:1%
+        padding:1%;
+        text-align: center;
     }
     .card {
     transition: all 0.3s ease;
     }
-
     .card-title {
         color: Black;
         font-weight: bold;
@@ -99,7 +102,7 @@
 <body>
     <div class="container">
         <div class="card" id="main" style="box-shadow: 0 4px 6px rgba(0,0,0,0.3); background-color: #fafafa;">
-            <div class="card-title" id="card-order">
+            <div class="card-title" id="card-order" style="color:#212529;">
                 Color Order!
             </div>
             <div class="card-body">
@@ -107,12 +110,12 @@
                     <div class="d-flex flex-col col-5">
                         <div class="card text-center" id="red" style="width: 18rem;">
                             <div class="card-body">
-                                <h1 class="card-title">?</h1>
+                                <h1 class="card-title" style="opacity: 0;">🟥</h1>
                             </div>
                         </div>
                         <div class="card text-center" id="blue" style="width: 18rem;">
                             <div class="card-body">
-                                <h1 class="card-title">?</h1>
+                                <h1 class="card-title" style="opacity: 0;">🟦</h1>
                             </div>
                         </div>
                     </div>
@@ -121,12 +124,12 @@
                     <div class="d-flex flex-col col-5">
                         <div class="card text-center" id="green" style="width: 18rem;">
                             <div class="card-body">
-                                <h1 class="card-title">?</h1>
+                                <h1 class="card-title" style="opacity: 0;">🟩</h1>
                             </div>
                         </div>
                         <div class="card text-center" id="yellow" style="width: 18rem;">
                             <div class="card-body">
-                                <h1 class="card-title">?</h1>
+                                <h1 class="card-title" style="opacity: 0;">🟨</h1>
                             </div>
                         </div>
                     </div>
