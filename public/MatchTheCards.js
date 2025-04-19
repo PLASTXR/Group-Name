@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let totalPairs = 3; 
     
     
-    const cardSymbols = ['🍎', '🍌', '🍒', '🍎', '🍌', '🍒'];//lol i was not downloading images
+    const cardSymbols = ['🍎A', '🍌B', '🍒C', '🍎A', '🍌B', '🍒C'];//lol i was not downloading images
     
     // Shuffle function - Fisher-Yates algorithm, preedy cool
     function shuffle(array) {
