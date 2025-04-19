@@ -398,6 +398,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-register.js
-login.js
+firebaseconfig.js
 /Old
