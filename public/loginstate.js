@@ -1,8 +1,9 @@
-import { auth } from "./firebaseconfig.js"; // Import the auth instance
+import { auth, db } from "./firebaseconfig.js"; // Import the auth and db instances
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
         const navbar = document.querySelector("nav .container");
     
         if (user) {
@@ -12,6 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 loginLink.style.display = "none";
             }
 
+            // Fetch the username from Firestore
+            let username = "User";
+            try {
+                const userDoc = await getDoc(doc(db, "users", user.uid));
+                if (userDoc.exists()) {
+                    username = userDoc.data().username || "User";
+                }
+            } catch (error) {
+                console.error("Error fetching username:", error.message);
+            }
+
             // Create a container for the welcome message and logout button
             const userContainer = document.createElement("div");
             userContainer.style.display = "flex";
@@ -19,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             userContainer.style.gap = "10px";
 
             const welcomeMessage = document.createElement("span");
-            welcomeMessage.textContent = `Welcome, ${user.email}`;
+            welcomeMessage.textContent = `Welcome, ${username}`;
             welcomeMessage.style.color = "#212529";
             welcomeMessage.style.fontSize = "1.2rem";
 
